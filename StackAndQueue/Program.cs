@@ -6,8 +6,9 @@ class Program
     {
         Console.WriteLine("                                 WELCOME TO STACK AND QUEUE PROGRAM                                 ");
         StackOperation stack = new StackOperation();
+        QueueOperation queue = new QueueOperation();
         bool check = true;
-        Console.WriteLine("1.Stack Creation\n2.Peek And Pop From Stack\n3.Exit");
+        Console.WriteLine("1.Stack Creation\n2.Peek And Pop From Stack\n3.Queue Operation\n4.Exit");
         while (check)
         {
             Console.WriteLine("\nEnter an option to execute: ");
@@ -28,6 +29,12 @@ class Program
                     stack.Display();
                     break;
                 case 3:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Display();
+                    break;
+                case 4:
                     check = false;
                     break;
             }
