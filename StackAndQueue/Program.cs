@@ -8,7 +8,7 @@ class Program
         StackOperation stack = new StackOperation();
         QueueOperation queue = new QueueOperation();
         bool check = true;
-        Console.WriteLine("1.Stack Creation\n2.Peek And Pop From Stack\n3.Queue Operation\n4.Exit");
+        Console.WriteLine("1.Stack Creation\n2.Peek And Pop From Stack\n3.Queue Operation\n4.Dequeue Using Linked List\n5.Exit");
         while (check)
         {
             Console.WriteLine("\nEnter an option to execute: ");
@@ -35,6 +35,13 @@ class Program
                     queue.Display();
                     break;
                 case 4:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Dequeue();
+                    queue.Display();
+                    break;
+                case 5:
                     check = false;
                     break;
             }
